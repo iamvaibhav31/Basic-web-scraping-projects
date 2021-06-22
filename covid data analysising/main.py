@@ -49,11 +49,16 @@ def covidcasesdata():
         print("*"*100)
         print("\n")
 
-        plt.bar(all_district_in_state,dataframe['Active Cases'],width=0.5,align='center')
+        plt.bar(all_district_in_state,dataframe['Active Cases'],width=1.0,align='center')
+        plt.xlabel("States")
+        plt.ylabel("Active Cases")
+        plt.title(f"{state} covid cases")
         fig = plt.gcf()
-        fig.set_size_inches(18.5 , 10.5)
+        fig.set_size_inches(10.5 , 5.5)
         plt.xticks(rotation = 75)
         plt.show()
+
+        
 
         
 if __name__ == "__main__":
